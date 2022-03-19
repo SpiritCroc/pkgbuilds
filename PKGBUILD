@@ -1,7 +1,7 @@
 # Maintainer: C. Dominik Bódi <dominik.bodi@dominikbodi.de>
 pkgname=mandos-server
 _srcname=mandos
-pkgver=1.8.9
+pkgver=1.8.14
 pkgrel=1
 pkgdesc="unlock LUKS encrypted drives remotely - server component"
 arch=(any)
@@ -9,13 +9,11 @@ url="https://wiki.recompile.se/wiki/Mandos"
 license=('GPL3')
 depends=(avahi
 	 gnupg
-	 python2-gnutls
-	 python-gobject2
-	 python2-gobject2
-         python-dbus
-         python2-dbus
-	 python-urwid
-	 python2-urwid
+     gnutls
+     python
+     python-gobject
+     python-urwid
+     dbus-python
 	 openssh)
 makedepends=(docbook-xml
              docbook-xsl
@@ -29,7 +27,7 @@ install=mandos.install
 source=("http://httpredir.debian.org/debian/pool/main/m/mandos/mandos_$pkgver.orig.tar.gz"
         'series'
 	'fix_makefile.patch')
-sha256sums=('9bec9f41b429fe9f554092719127b710a379003641d17aeb01189eb51dcf3deb'
+sha256sums=('c51825bcadf28b9b95a3a3b94f2846079dd245b8ac4b5a2b430f6ab49fa253b7'
             'd5d2d190799efdc4ecba1221a405983a3e770b085f055c1c156199436836dc47'
             '26ede8999354df4a1697e697d317c2f9e90c532ca849888d544c1905847ef1e5')
 
